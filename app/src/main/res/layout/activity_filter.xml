@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C9C9C9">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/applyButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/apartmentFilterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apartment_type"
+                android:textSize="20sp" />
+
+            <com.gravity.nobroker.custom.FilterButton
+                android:id="@+id/apartmentFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apartmentFilterLabel"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+            </com.gravity.nobroker.custom.FilterButton>
+
+            <TextView
+                android:id="@+id/buildingFilterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apartmentFilter"
+                android:layout_marginTop="20dp"
+                android:text="@string/property_type"
+                android:textSize="20sp" />
+
+            <com.gravity.nobroker.custom.FilterButton
+                android:id="@+id/buildingFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buildingFilterLabel"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+            </com.gravity.nobroker.custom.FilterButton>
+
+            <TextView
+                android:id="@+id/furnishingFilterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buildingFilter"
+                android:layout_marginTop="20dp"
+                android:text="@string/furnishing"
+                android:textSize="20sp" />
+
+            <com.gravity.nobroker.custom.FilterButton
+                android:id="@+id/furnishingFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/furnishingFilterLabel"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+            </com.gravity.nobroker.custom.FilterButton>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:padding="15dp"
+        android:text="@string/apply"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</RelativeLayout>
